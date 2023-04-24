@@ -43,6 +43,7 @@ Desktop:
   --color-button: #FFFFFF; */
 
   --bg-primary: #FFFFFF;
+  --bg-primary-blur: #ffffffd6;
   --bg-primary-op: #121212c0;
   --bg-secondary: #F5F5F5;
   --text-primary: #212121;
@@ -64,6 +65,7 @@ Desktop:
   --color-button: #FFFFFF; */
 
   --bg-primary: #121212;
+  --bg-primary-blur: #121212d9;
   --bg-primary-op: #ffffffca;
   --bg-secondary: #212121;
   --text-primary: #FFFFFF;

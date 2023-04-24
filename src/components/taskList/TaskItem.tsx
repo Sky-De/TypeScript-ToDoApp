@@ -1,18 +1,18 @@
-import { useEffect, useRef, useState } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 import { Task } from "../../models";
+import { TaskContext, useTasks } from "../../context/tasksContext";
 
 type Props = {
-    tasks: Task[];
-    task: Task;
-    setTasks: any;
+    task: Task;  
 }
 
-const TaskItem: React.FC<Props> = ({ task, setTasks, tasks }) => {
+const TaskItem: React.FC<Props> = ({ task }) => {
     const [isEditing, setIsEditing] = useState<boolean>(false);
     const [editedTask, setEditedTask] = useState<string>(task.task);
+    const { dispatch } = useTasks();
 
     // deleting-----------------------------------------
-    const INITIAL_SC_TO_DELETE = 5;
+    const INITIAL_SC_TO_DELETE = 25;
     const [isDeleting, setIsDeleting] = useState(false);
     const [deleteNow, setDeleteNow] = useState(false);
     const [counter, setCounter] = useState(INITIAL_SC_TO_DELETE);
@@ -20,8 +20,7 @@ const TaskItem: React.FC<Props> = ({ task, setTasks, tasks }) => {
 
     useEffect(() => {
         if(deleteNow) {
-            const filteredDeletedTasks = tasks.filter(item => item.id !== task.id);
-            setTasks(filteredDeletedTasks);
+            deleteTask();
             setIsDeleting(false);
             clearInterval(deleteIntervalRef.current!);
         }
@@ -30,8 +29,7 @@ const TaskItem: React.FC<Props> = ({ task, setTasks, tasks }) => {
             setCounter((prevCounter) => prevCounter - 1);
         }, 1000);
         }else if(isDeleting && counter <= 0) {
-            const filteredDeletedTasks = tasks.filter(item => item.id !== task.id);
-            setTasks(filteredDeletedTasks);
+            deleteTask();
             setIsDeleting(false);
             clearInterval(deleteIntervalRef.current!);
         }
@@ -51,19 +49,18 @@ const TaskItem: React.FC<Props> = ({ task, setTasks, tasks }) => {
 
      const immediateDelete = () => setDeleteNow(true);
      
+    //  delete---------
+    const deleteTask = () => dispatch({ type: "DELETE_TASK", id: task.id});
     //  check---------
      const handleDone = () => {
-        const checkedForDoneTasks = tasks.map(item => item.id === task.id ? {...task, isDone: !task.isDone } : item);
-        setTasks(checkedForDoneTasks);
+        dispatch({type: "TOGGLE_IS_DONE_TASK", id: task.id});
      }
     // edit--------------
      const handleEdit = () => {
         if(task.isDone) return
         // saves
         if(isEditing) {
-            console.log("save");  
-            const editedTasks = tasks.map(item => item.id === task.id ? {...task, task: editedTask === "" ? task.task : editedTask} : item);
-            setTasks(editedTasks);
+            dispatch({ type: "EDIT_TASK", id: task.id, newTask: editedTask});
             editedTask === "" && setEditedTask(task.task);
         }
         setIsEditing(pre => !pre);
@@ -83,7 +80,10 @@ const TaskItem: React.FC<Props> = ({ task, setTasks, tasks }) => {
                     onChange={(e) => setEditedTask(e.target.value)} /> 
                 : <p>{task.task}</p> }
             </div>
-            {isDeleting && <span onClick={immediateDelete}>{counter} delete Now ? Click</span>}
+            {isDeleting && <div className="list__item__warning" onClick={immediateDelete}>
+                <span className="list__item__warning--counter" >{counter} </span>
+                <span className="list__item__warning--text">delete Now ? Click</span>
+                </div>}
             <div className="list__item--action">
                 <i title={`${isDeleting ? "Undo" : "Delete"}`} className={`bx ${isDeleting ? 'bx-undo' : 'bx-trash'}`} onClick={startDelete}></i>
                 <i title={`${isEditing ? 'Save' : 'Edit'}`} className={`bx ${isEditing ? 'bx-memory-card' : 'bx bxs-edit'} ${task.isDone && 'disable'}`} onClick={handleEdit}></i>

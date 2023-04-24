@@ -1,22 +1,28 @@
 import { useState } from 'react';
-import './App.css';
 import InputField from './components/InputField';
-import { Task } from './models';
 import TaskList from './components/taskList/TaskList';
+import { useTasks } from './context/tasksContext';
+import './App.css';
 
 const App: React.FC = () =>  {
   const [darkTheme, setDarkTheme] = useState(true);
   const changeThemeMode = () => setDarkTheme(pre => !pre);
 
+  // const { dispatch } = useContext(TaskContext);
+  const { dispatch } = useTasks();
+  
   const [task, setTask] = useState<string>("");
-  const [tasks, setTasks] = useState<Task[]>([]);
   
   const handleSubmit = (e:React.FormEvent) => {
         e.preventDefault();
-        if(task) setTasks([...tasks, { id:Date.now(), task:task, isDone: false}])
+        const newTask = {
+          id:Date.now(), 
+          task, 
+          isDone: false
+        }
+        if(task) dispatch({type: "ADD_TASK", task: newTask});
         setTask("");
   }
-    console.log(tasks);
   
   return (
     <div className={`App ${darkTheme && "dark" }`}>
@@ -35,7 +41,7 @@ const App: React.FC = () =>  {
         <InputField task={task} setTask={setTask} handleSubmit={handleSubmit} />
       </div>
 
-      <TaskList tasks={tasks} setTasks={setTasks} />
+      <TaskList/>
 
     </div>
   );

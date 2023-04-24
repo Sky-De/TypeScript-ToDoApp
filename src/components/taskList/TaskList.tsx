@@ -1,23 +1,22 @@
+import { useContext } from "react";
 import { Task } from "../../models";
 import TaskItem from "./TaskItem";
 import "./style.css";
+import { useTasks } from "../../context/tasksContext";
 // fix it
 
 
-interface Props {
-    tasks: Task[];
-    setTasks: any;
-}
-const TaskList: React.FC<Props> = ({ tasks, setTasks }) => {
+
+const TaskList: React.FC = () => {
+  const { tasks } = useTasks();
+  
   return (
     <ul className="list">
         {
-            tasks.map(task => (
+            tasks?.map(task => (
                  <TaskItem
                   key={task.id} 
-                  task={task} 
-                  tasks={tasks} 
-                  setTasks={setTasks} />))
+                  task={task} />))
         }
     </ul>
   );
