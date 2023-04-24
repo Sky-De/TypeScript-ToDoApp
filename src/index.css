@@ -49,6 +49,10 @@ Desktop:
   --text-secondary: #757575;
   --bg-button: #4CAF50;
   --color-button: #FFFFFF;
+  --error: #d32f2f;
+  --info: #0288d1;
+  --success: #2e7d32;
+  --disable:#808080;
 }
 
 .App.dark {
@@ -66,10 +70,14 @@ Desktop:
   --text-secondary: #BDBDBD;
   --bg-button: #4CAF50;
   --color-button: #FFFFFF;
+  --error: #d32f2f;
+  --info: #0288d1;
+  --success: #2e7d32;
+  --disable:#808080;
 }
 
 ::-webkit-scrollbar {
-  width: 0;
+  display: none;
 }
 
 

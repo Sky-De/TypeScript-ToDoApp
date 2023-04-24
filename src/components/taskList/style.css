@@ -1,0 +1,115 @@
+
+/* TaskList---------------------------------------------------- */
+
+/* flex */
+/* .list{
+    margin: 0 auto;
+    max-width: 1200px;
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+} */
+
+/* grid */
+.list{
+    margin: 0 auto;
+    max-width: 1200px;
+    display: grid;
+    gap: 1rem;
+    margin-top: 2rem;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+@media screen and (max-width: 1000px) {
+    .list {
+            grid-template-columns:  1fr;
+        }
+}
+@media screen and (max-width: 1200px) {
+    .list {
+            padding: 0 .5rem;
+        }
+}
+
+/* media--padding */
+.list__item{
+    color: var(--text-primary);
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    /* padding-left: 0.25rem; */
+    padding-left: 1rem;
+    /* padding-left: 1.5rem; */
+    background-color: var(--bg-secondary);
+    /* flex: 1 1 500px; */
+    position: relative;
+}
+
+/* media--positon  */
+.list__item span {
+    /* margin-right: 1rem; */
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    color: var(--error);
+    cursor: pointer;
+    background-color: var(--bg-primary);
+    padding: 0.25rem 0.5rem;
+    border-radius: 10px;
+    animation: throbbing 1.1s infinite ease;
+}
+
+/* media width */
+.list__item--task {
+    user-select: none;
+    max-width: 200px;
+    /* width: 200px; */
+    width: 100px;
+    overflow-x: scroll;
+}
+
+.list__item--task--input {
+    border: none;
+    background-color: transparent;
+    color: var(--info);
+    font-family: "ROBOTO";
+    font-size: 1rem;
+}
+
+.list__item--action {
+    display: flex;
+    align-items: center;
+}
+
+
+
+.list__item--action i{
+    margin-right: 1.5rem;
+    font-size: 1.5rem;
+    /* media size */
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.list__item--action i:nth-child(1):hover {
+    color: var(--error);
+}
+
+.list__item--action i:nth-child(2):hover {
+    color: var(--info);
+}
+.list__item--action i:nth-child(2).disable {
+    color: var(--disable);
+}
+
+.list__item--action i:nth-child(3):hover {
+    color: var(--success);
+}
+
+
+.list__item--task s {
+    color: var(--bg-button);
+}

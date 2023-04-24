@@ -2,6 +2,7 @@ import { useState } from 'react';
 import './App.css';
 import InputField from './components/InputField';
 import { Task } from './models';
+import TaskList from './components/taskList/TaskList';
 
 const App: React.FC = () =>  {
   const [darkTheme, setDarkTheme] = useState(true);
@@ -33,6 +34,8 @@ const App: React.FC = () =>  {
       <div className="form__con">
         <InputField task={task} setTask={setTask} handleSubmit={handleSubmit} />
       </div>
+
+      <TaskList tasks={tasks} setTasks={setTasks} />
 
     </div>
   );
