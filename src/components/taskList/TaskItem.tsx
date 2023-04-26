@@ -23,7 +23,8 @@ const TaskItem: React.FC<Props> = ({ task }) => {
 
     useEffect(() => {
         if(deleteNow) {
-            deleteTask();
+            // deleteTask();
+            dispatch({ type: "DELETE_TASK", id: task.id});
             setIsDeleting(false);
             clearInterval(deleteIntervalRef.current!);
         }
@@ -32,7 +33,8 @@ const TaskItem: React.FC<Props> = ({ task }) => {
             setCounter((prevCounter) => prevCounter - 1);
         }, 1000);
         }else if(isDeleting && counter <= 0) {
-            deleteTask();
+            // deleteTask();
+            dispatch({ type: "DELETE_TASK", id: task.id});
             setIsDeleting(false);
             clearInterval(deleteIntervalRef.current!);
         }
@@ -41,7 +43,7 @@ const TaskItem: React.FC<Props> = ({ task }) => {
         return () => {
         clearInterval(deleteIntervalRef.current!);
         };
-    }, [isDeleting, counter, deleteNow]);
+    }, [isDeleting, counter, deleteNow, dispatch, task]);
     
      const startDelete = () => {
         if (isDeleting) {
@@ -53,7 +55,7 @@ const TaskItem: React.FC<Props> = ({ task }) => {
      const immediateDelete = () => setDeleteNow(true);
      
     //  delete---------
-    const deleteTask = () => dispatch({ type: "DELETE_TASK", id: task.id});
+    // const deleteTask = () => dispatch({ type: "DELETE_TASK", id: task.id});
     //  check---------
      const handleDone = () => {
         dispatch({type: "TOGGLE_IS_DONE_TASK", id: task.id});
