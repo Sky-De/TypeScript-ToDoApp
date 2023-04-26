@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+/* basics--------------------------------------------------------------- */
 *{
   margin: 0;
   padding: 0;
@@ -10,19 +11,12 @@ input{
   outline: none;
 }
 
-
-/* For the dark mode of your todo app,
-I would suggest using the following colors:  */
-
-
+::-webkit-scrollbar {
+  display: none;
+}
 
 
-/* As for the font sizes,
-Material Design recommends using a type scale that is based on multiples of 4,
-and using different font sizes for different screen densities. Here are my recommendations based on this principle: Mobile: body text should be 14sp,
-and headings should be 20sp Tablet: body text should be 16sp,
-and headings should be 24sp Desktop: body text should be 18sp,
-and headings should be 28sp */
+/* font size----------------------------------------------------------- */
 
 /* Mobile: 
 14px for body text,
@@ -34,14 +28,46 @@ Desktop:
 18px for body text,
 24px for headings */
 
-:root {
-  /* --bg-primary: #FFFFFF;
-  --bg-secondary: #F4F4F4;
-  --text-primary: #333333;
-  --text-secondary: #666666;
-  --bg-button: #4CAF50;
-  --color-button: #FFFFFF; */
+/* Base font sizes for mobile, tablet and desktop */
+@media screen and (max-width: 767px) {
+  :root {
+    font-size: 14px;
+  }
+}
 
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  :root {
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  :root {
+    font-size: 18px;
+  }
+}
+
+/* Font sizes for body text and headings using rem */
+body {
+  font-size: 1rem;
+  /* This will be 14px, 16px or 18px depending on the media query above */
+}
+
+h1,
+h2,
+h3 {
+  font-size: 1.2857rem;
+  /* This will be 18px, 22px or 24px depending on the media query above */
+}
+
+.list__item--action i,
+.header__icon,
+.header__toggleMode{
+  font-size: 1.5rem;
+}
+
+/* colors------------------------------------------------------ */
+:root {
   --bg-primary: #FFFFFF;
   --bg-primary-blur: #ffffffd6;
   --bg-primary-op: #121212c0;
@@ -57,13 +83,6 @@ Desktop:
 }
 
 .App.dark {
-  /* --bg-primary: #202020;
-  --bg-secondary: #333333;
-  --text-primary: #FFFFFF;
-  --text-secondary: #CCCCCC;
-  --bg-button: #4CAF50;
-  --color-button: #FFFFFF; */
-
   --bg-primary: #121212;
   --bg-primary-blur: #121212d9;
   --bg-primary-op: #ffffffca;
@@ -78,23 +97,9 @@ Desktop:
   --disable:#808080;
 }
 
-::-webkit-scrollbar {
-  display: none;
-}
 
 
-body {
-  margin: 0;
-  font-family:'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
+
 
 

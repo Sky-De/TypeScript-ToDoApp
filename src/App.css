@@ -37,11 +37,10 @@
 
 .header__toggleMode{
     color: var(--text-primary);
-    font-size: 1.6rem;
+    /* font-size: 1.6rem; */
     cursor: pointer;
 }
 
 .header__icon {
-    font-size: 2rem;
     color: var(--text-primary);
 }

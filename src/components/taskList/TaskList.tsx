@@ -1,11 +1,6 @@
-import { useContext } from "react";
-import { Task } from "../../models";
 import TaskItem from "./TaskItem";
-import "./style.css";
 import { useTasks } from "../../context/tasksContext";
-// fix it
-
-
+import "./style.css";
 
 const TaskList: React.FC = () => {
   const { tasks } = useTasks();
@@ -13,11 +8,8 @@ const TaskList: React.FC = () => {
   return (
     <ul className="list">
         {
-            tasks?.map(task => (
-                 <TaskItem
-                  key={task.id} 
-                  task={task} />))
-        }
+         tasks?.map( task =>  <TaskItem key={task.id} task={task} /> )
+        }  
     </ul>
   );
 };

@@ -1,6 +1,6 @@
-import { useContext, useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Task } from "../../models";
-import { TaskContext, useTasks } from "../../context/tasksContext";
+import { useTasks } from "../../context/tasksContext";
 
 type Props = {
     task: Task;  
@@ -11,8 +11,11 @@ const TaskItem: React.FC<Props> = ({ task }) => {
     const [editedTask, setEditedTask] = useState<string>(task.task);
     const { dispatch } = useTasks();
 
-    // deleting-----------------------------------------
-    const INITIAL_SC_TO_DELETE = 25;
+    // Deleting process-user after click on delete btn have 5sc to stop delete proccess
+    // by tap on undo btn
+    // or can wait 5sc to auto delelte 
+    // or can click on counter to delete immidiately
+    const INITIAL_SC_TO_DELETE = 5;
     const [isDeleting, setIsDeleting] = useState(false);
     const [deleteNow, setDeleteNow] = useState(false);
     const [counter, setCounter] = useState(INITIAL_SC_TO_DELETE);
@@ -38,7 +41,7 @@ const TaskItem: React.FC<Props> = ({ task }) => {
         return () => {
         clearInterval(deleteIntervalRef.current!);
         };
-    }, [isDeleting, counter,deleteNow]);
+    }, [isDeleting, counter, deleteNow]);
     
      const startDelete = () => {
         if (isDeleting) {

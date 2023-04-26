@@ -56,8 +56,6 @@
     border: none;
     background-color: transparent;
     color: var(--info);
-    font-family: "ROBOTO";
-    font-size: 1rem;
 }
 
 .list__item--action {
@@ -67,7 +65,6 @@
 
 .list__item--action i{
     margin-right: 1.5rem;
-    font-size: 1.5rem;
     cursor: pointer;
     transition: color 0.3s ease;
 }
@@ -91,6 +88,28 @@
     color: var(--bg-button);
 }
 
+
+
+/* media Q------------------------------------------------------- */
+@media screen and (min-width: 1201px) {
+    .list {
+        padding: 0;
+    }
+    .list__item--task {
+        min-width: 25vw;
+    }
+}
+
+@media screen and (min-width: 1600px) {
+    .list {
+        padding: 0;
+    }
+
+    .list__item--task {
+        min-width: 70%;
+    }
+}
+
 @media screen and (min-width: 800px) and (max-width: 950px) {
     .list__item__warning--text{
         display: none;
@@ -100,9 +119,9 @@
     }
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 800px) and (max-width:1200px) {
     .list {
-        padding: 0.5rem;
+        padding: 0 0.5rem;
         
     }
     .list__item--task {

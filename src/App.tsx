@@ -8,7 +8,6 @@ const App: React.FC = () =>  {
   const [darkTheme, setDarkTheme] = useState(true);
   const changeThemeMode = () => setDarkTheme(pre => !pre);
 
-  // const { dispatch } = useContext(TaskContext);
   const { dispatch } = useTasks();
   
   const [task, setTask] = useState<string>("");
