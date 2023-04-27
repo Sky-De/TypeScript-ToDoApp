@@ -28,9 +28,10 @@ const App: React.FC = () =>  {
   }
 
   const handleReverse = () => dispatch({ type:'REVERSE_TASKS' });
+  const handleRefreshAll = () => dispatch({ type:'REFRESH_ALL_TASKS' });
   
   return (
-    <div className={`App ${darkTheme && "dark" }`}>
+    <div role='application' className={`App ${darkTheme && "dark" }`}>
 
       <div className="header__con">
        <header className='header'>
@@ -38,6 +39,7 @@ const App: React.FC = () =>  {
          <div className="header__toggleMode" onClick={changeThemeMode}>
            {darkTheme ? <i className='bx bx-sun'></i> : <i className='bx bx-moon'></i>}
          </div>
+         <i className='bx bx-refresh header__icon' onClick={handleRefreshAll}></i>
          <i className='bx bx-sort-alt-2 header__icon' onClick={handleReverse}></i>
        </header>
       </div>

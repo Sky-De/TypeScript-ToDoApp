@@ -44,6 +44,7 @@
 
 .header__icon {
     color: var(--text-primary);
+    cursor: pointer;
 }
 
 
