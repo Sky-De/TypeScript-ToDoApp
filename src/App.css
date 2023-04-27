@@ -10,6 +10,7 @@
 }
 
 .header__con {
+    z-index: 10;
     position: fixed;
     width: 100%;
     top: 0;
@@ -43,4 +44,11 @@
 
 .header__icon {
     color: var(--text-primary);
+}
+
+
+@media screen and (width < 600) {
+    .header__con {
+            padding: 1.25rem 1rem;
+        }
 }

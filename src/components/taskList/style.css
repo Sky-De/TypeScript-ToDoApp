@@ -19,6 +19,8 @@
     gap: 1rem;
     margin-top: 2rem;
     grid-template-columns: repeat(2, 1fr);
+    margin-bottom: 2rem;
+    grid-auto-flow: dense;
 }
 
 .list__item{
@@ -69,25 +71,47 @@
     transition: color 0.3s ease;
 }
 
-.list__item--action i:nth-child(1):hover {
+/* on tap in touched devices */
+.list__item--action i:nth-child(1):active {
     color: var(--error);
 }
 
-.list__item--action i:nth-child(2):hover {
+.list__item--action i:nth-child(2):active {
     color: var(--info);
 }
+
+.list__item--action i:nth-child(3):active {
+    color: var(--success);
+}
+
+/* hover-but prevents colors change in touched devices */
+@media (hover:hover) {
+
+    .list__item--action i:nth-child(1):hover {
+        color: var(--error);
+    }
+    
+    .list__item--action i:nth-child(2):hover {
+        color: var(--info);
+    }
+    
+    .list__item--action i:nth-child(3):hover {
+        color: var(--success);
+    }
+}
+
 .list__item--action i:nth-child(2).disable {
     color: var(--disable);
 }
 
-.list__item--action i:nth-child(3):hover {
-    color: var(--success);
+.list__item--action i:focus {
+    outline: none !important;
 }
+
 
 .list__item--task s {
     color: var(--bg-button);
 }
-
 
 
 /* media Q------------------------------------------------------- */

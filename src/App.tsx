@@ -5,11 +5,15 @@ import { useTasks } from './context/tasksContext';
 import './App.css';
 
 const App: React.FC = () =>  {
-  const [darkTheme, setDarkTheme] = useState(true);
-  const changeThemeMode = () => setDarkTheme(pre => !pre);
+  // dark/light mode handle
+  const isDark: boolean = localStorage.getItem("isLight") === null ? true : false;
+  const [darkTheme, setDarkTheme] = useState<boolean>(isDark);
+  const changeThemeMode = () => {
+    isDark ? localStorage.setItem("isLight","") : localStorage.removeItem("isLight");
+    setDarkTheme(pre => !pre);
+  }
 
   const { dispatch } = useTasks();
-  
   const [task, setTask] = useState<string>("");
   
   const handleSubmit = (e:React.FormEvent) => {
@@ -22,6 +26,8 @@ const App: React.FC = () =>  {
         if(task) dispatch({type: "ADD_TASK", task: newTask});
         setTask("");
   }
+
+  const handleReverse = () => dispatch({ type:'REVERSE_TASKS' });
   
   return (
     <div className={`App ${darkTheme && "dark" }`}>
@@ -32,7 +38,7 @@ const App: React.FC = () =>  {
          <div className="header__toggleMode" onClick={changeThemeMode}>
            {darkTheme ? <i className='bx bx-sun'></i> : <i className='bx bx-moon'></i>}
          </div>
-         <i className='bx bx-task header__icon'></i>
+         <i className='bx bx-sort-alt-2 header__icon' onClick={handleReverse}></i>
        </header>
       </div>
       

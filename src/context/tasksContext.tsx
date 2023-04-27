@@ -12,6 +12,7 @@ interface State {
 
 type Action =
   | { type: "ADD_TASK"; task: Task }
+  | { type: "REVERSE_TASKS" }
   | { type: "EDIT_TASK"; id: number; newTask: string }
   | { type: "TOGGLE_IS_DONE_TASK"; id: number }
   | { type: "DELETE_TASK"; id: number }
@@ -31,7 +32,12 @@ const appReducer = (state: State, action: Action): State => {
     case "ADD_TASK":
       return {
         ...state,
-        tasks: [...state.tasks, action.task],
+        tasks: [action.task, ...state.tasks],
+      };
+    case "REVERSE_TASKS":
+      return {
+        ...state,
+        tasks: [...state.tasks].reverse(),
       };
     case "TOGGLE_IS_DONE_TASK":
       return {
