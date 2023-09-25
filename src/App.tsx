@@ -35,7 +35,7 @@ const App: React.FC = () =>  {
 
       <div className="header__con">
        <header className='header'>
-         <h1 className='header__title'>Online Todo</h1>
+         <h1 className='header__title'>Todo App</h1>
          <div className="header__toggleMode" onClick={changeThemeMode}>
            {darkTheme ? <i className='bx bx-sun'></i> : <i className='bx bx-moon'></i>}
          </div>
