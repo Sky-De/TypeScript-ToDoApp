@@ -1,46 +1,106 @@
-# Getting Started with Create React App
+# 📝 TypeScript Todo App - Your Ultimate Task Manager! 🌟
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Feel free to give it a start 🌟
 
-## Available Scripts
+## Table of Contents
 
-In the project directory, you can run:
+- [Tech Stack](#tech-stack)
+- [Demo](#demo)
+- [Screenshots](#screenshots)
+- [About](#about)
+- [Installation](#installation)
+- [Contact](#contact)
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Tech Stack
+- ⚛️ React.js 
+- 🔄 Functional components 
+- 📜Typescript
+- 🏠 PWA
+- 🎨Pure CSS 
+- 📦 Box icons 
+- 📱 Fully responsive 
+- 🌙 Dark / ☀️ Light mode 
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Demo
 
-### `npm test`
+Take a look at the live project deployed on Netlify
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+[Live Demo](https://typescript-todo-skyde.netlify.app)
 
-### `npm run build`
+![Demo](demo.gif)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Screenshots
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+**DESKTOP**
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+![chrome-capture-2023-8-26-min](https://github.com/Sky-De/TypeScript-ToDoApp/assets/79264045/9bf22516-c94a-4968-aa63-acede22b8a1e)
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+**Mobile**
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+![chrome-capture-2023-8-26 (1)-min](https://github.com/Sky-De/TypeScript-ToDoApp/assets/79264045/b1781f97-3cc8-44a7-a4fa-b8f126d4937f)
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+![tidi](https://github.com/Sky-De/TypeScript-ToDoApp/assets/79264045/2bdd847a-2f91-42b9-bb9d-29c07fe7f354)
 
-## Learn More
+![tiiidooo](https://github.com/Sky-De/TypeScript-ToDoApp/assets/79264045/1de0fb8f-705f-48ff-8d0b-57321320ac96)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+
+
+
+## About
+
+Title:  🛍️ Introducing our TypeScript Todo App, where productivity meets innovation! 
+
+✨ Features That Empower Your Day:
+
+🌗 Light & Dark Mode: Tailor your experience with ease. Switch between light and dark modes for a visually pleasing and comfortable working environment.
+
+🔄 LocalStorage Superpowers: Your tasks are safe! We've harnessed the magic of localStorage to preserve your task list, even after reloading the app.
+
+📝 Task Management Mastery: Take control with a range of powerful functionalities: Add, Edit, Delete, Undo Delete, Mark as Done, Unmark Done, Reverse Tasks, and Undone All Tasks.
+
+🌈 Material Design Aesthetics: We've embraced the principles of Material Design, offering a sleek and stylish interface that's as functional as it is beautiful.
+
+🚀 Blazing Fast: Experience lightning-speed task management, ensuring you stay focused on what matters most.
+
+📦 PWA Ready: Elevate your experience with PWA capabilities. Install the app as a shortcut on your mobile or desktop for instant access.
+
+🎨 Box Icons & Stunning UI: We've adorned your task manager with elegant Box Icons, and our UI/UX design guarantees a delightful and intuitive experience.
+
+Ready to reclaim your productivity? Dive into the world of organized tasks! Clone this repository, follow our setup instructions in the documentation, and start conquering your to-do list like a pro!
+
+📆 Achieve more with our TypeScript Todo App. Your tasks, your way! 🚀
+
+
+
+## Installation
+
+Provided step-by-step instructions on how to install and run this project locally.
+
+```bash
+# Clone the repository
+git clone https://github.com/Sky-De/TypeScript-ToDoApp
+
+# Change directory
+cd your-repo-name
+
+# Install dependencies
+npm install
+
+# Run the project
+npm run start
+```
+
+
+## Contact
+
+**skyDe**
+
+[LinkedIn](https://www.linkedin.com/in/sky-de-763248228)
+
+[GitHub](https://github.com/Sky-De)
+
+[Twitter](https://twitter.com/SkyDe1991?t=b2SJxGA4wmHwwgxDUUtE8Q&s=09)
