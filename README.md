@@ -62,11 +62,11 @@ Take a look at the live project deployed on Netlify
 
 **Mobile --------------------------------------------------------------------------**
 
-<img src="https://github.com/Sky-De/TypeScript-ToDoApp/assets/79264045/b1781f97-3cc8-44a7-a4fa-b8f126d4937f" width="300">
+<img src="https://github.com/Sky-De/TypeScript-ToDoApp/assets/79264045/b1781f97-3cc8-44a7-a4fa-b8f126d4937f" width="270">
 
-<img src="https://github.com/Sky-De/TypeScript-ToDoApp/assets/79264045/2bdd847a-2f91-42b9-bb9d-29c07fe7f354" width="300">
+<img src="https://github.com/Sky-De/TypeScript-ToDoApp/assets/79264045/2bdd847a-2f91-42b9-bb9d-29c07fe7f354" width="270">
 
-<img src="https://github.com/Sky-De/TypeScript-ToDoApp/assets/79264045/1de0fb8f-705f-48ff-8d0b-57321320ac96" width="300">
+<img src="https://github.com/Sky-De/TypeScript-ToDoApp/assets/79264045/1de0fb8f-705f-48ff-8d0b-57321320ac96" width="270">
 
 ![line]
 
