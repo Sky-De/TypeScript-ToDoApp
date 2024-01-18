@@ -1,26 +1,46 @@
-# 📝 TypeScript Todo App - Your Ultimate Task Manager! 🌟
+# 📝 TypeScript Todo App - Your Ultimate Task Manager! 
 
 Feel free to give it a start 🌟
+![line]
 
 ## Table of Contents
 
 - [Tech Stack](#tech-stack)
+- [Features](#features)
 - [Demo](#demo)
-- [Screenshots](#screenshots)
+- [Preview](#preview)
 - [About](#about)
 - [Installation](#installation)
 - [Contact](#contact)
 
+![line]
 
 ## Tech Stack
-- ⚛️ React.js 
-- 🔄 Functional components 
-- 📜Typescript
-- 🏠 PWA
-- 🎨Pure CSS 
-- 📦 Box icons 
-- 📱 Fully responsive 
-- 🌙 Dark / ☀️ Light mode 
+![Static Badge](https://img.shields.io/badge/React-black?style=for-the-badge&logo=react)
+![Static Badge](https://img.shields.io/badge/TypeScript-black?style=for-the-badge&logo=typescript)
+![Static Badge](https://img.shields.io/badge/CSS-black?style=for-the-badge&logo=CSS3)
+![Static Badge](https://img.shields.io/badge/PWA-black?style=for-the-badge&logo=pwa)
+![Static Badge](https://img.shields.io/badge/state%2FManagement%2FuseContext-black?style=for-the-badge)
+![Static Badge](https://img.shields.io/badge/Netlify-black?style=for-the-badge&logo=netlify)
+
+
+![line]
+
+## Features
+
+- Fully responsive
+- Dark-light mode
+- Stunning design
+- PWA ready
+- Delete task
+- Add the task
+- Edit the task
+- Mark the task as done
+- Mark the task as undone
+- Reset all the tasks
+- Reverse the order of the tasks
+
+![line]
 
 ## Demo
 
@@ -30,25 +50,25 @@ Take a look at the live project deployed on Netlify
 
 ![Demo](demo.gif)
 
-## Screenshots
+![line]
 
-**DESKTOP**
+## Preview
 
-![chrome-capture-2023-8-26-min](https://github.com/Sky-De/TypeScript-ToDoApp/assets/79264045/9bf22516-c94a-4968-aa63-acede22b8a1e)
+**DESKTOP  --------------------------------------------------------------------------**
 
-
-
-**Mobile**
-
-![chrome-capture-2023-8-26 (1)-min](https://github.com/Sky-De/TypeScript-ToDoApp/assets/79264045/b1781f97-3cc8-44a7-a4fa-b8f126d4937f)
-
-![tidi](https://github.com/Sky-De/TypeScript-ToDoApp/assets/79264045/2bdd847a-2f91-42b9-bb9d-29c07fe7f354)
-
-![tiiidooo](https://github.com/Sky-De/TypeScript-ToDoApp/assets/79264045/1de0fb8f-705f-48ff-8d0b-57321320ac96)
+<img src="https://github.com/Sky-De/TypeScript-ToDoApp/assets/79264045/9bf22516-c94a-4968-aa63-acede22b8a1e" width="60%">
 
 
 
+**Mobile --------------------------------------------------------------------------**
 
+<img src="https://github.com/Sky-De/TypeScript-ToDoApp/assets/79264045/b1781f97-3cc8-44a7-a4fa-b8f126d4937f" width="300">
+
+<img src="https://github.com/Sky-De/TypeScript-ToDoApp/assets/79264045/2bdd847a-2f91-42b9-bb9d-29c07fe7f354" width="300">
+
+<img src="https://github.com/Sky-De/TypeScript-ToDoApp/assets/79264045/1de0fb8f-705f-48ff-8d0b-57321320ac96" width="300">
+
+![line]
 
 ## About
 
@@ -74,7 +94,7 @@ Ready to reclaim your productivity? Dive into the world of organized tasks! Clon
 
 📆 Achieve more with our TypeScript Todo App. Your tasks, your way! 🚀
 
-
+![line]
 
 ## Installation
 
@@ -93,8 +113,9 @@ npm install
 # Run the project
 npm run start
 ```
+![line]
 
-
+[line]: https://user-images.githubusercontent.com/75939390/137615281-3a875960-92cc-407f-97fe-fd2319bdb252.png
 ## Contact
 
 **skyDe**
